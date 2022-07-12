@@ -30,3 +30,4 @@ int print_HEX(char *format, va_list);
 int print_octa(char *format, va_list);
 int print_unsign(char *format, va_list);
 int _putchar(char ch);
+int print_binary(char *format, va_list);

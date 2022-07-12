@@ -38,3 +38,40 @@ int print_octa(char *format, va_list args)
 	free(octa);
 	return (OctSize);
 }
+/**
+ * print_binary - prints the binary representation of char
+ * @format: the char to be converted
+ * @args: list of arguments
+ *
+ * Return: the size of the char
+ */
+int print_binary(char *format, va_list args)
+{
+	int j, len, temp;
+	unsigned int num;
+	int binary_arr[1000];
+	(void) format;
+
+	num = va_arg(args, unsigned int);
+
+	len=0;
+	while (num > 0)
+	{
+		temp = 0;
+		temp = num % 2;
+		binary_arr[len] = temp + 48;
+		num /= 2;
+		len++;
+	}
+
+	j = len - 1;
+	while (j >= 0)
+	{
+		_putchar(binary_arr[j]);
+		j--;
+	}
+	
+	return (j);
+
+}
+

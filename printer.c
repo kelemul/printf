@@ -16,6 +16,7 @@ printchar printtype[] = {
 {"%c", print_char},
 {"%s", print_str_lower},
 {"%d", print_int},
+{"%b", print_binary},
 {"%i", print_int},
 {"%%", print_percent},
 {"%x", print_hex},
