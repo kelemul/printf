@@ -53,8 +53,9 @@ int print_binary(char *format, va_list args)
 	(void) format;
 
 	num = va_arg(args, unsigned int);
-
+	
 	len=0;
+
 	while (num > 0)
 	{
 		temp = 0;
